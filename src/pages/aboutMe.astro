@@ -1,0 +1,100 @@
+---
+//Agregando codigo JavaScript
+
+//Definimos el titulo de la pagina usando una constante
+const pageTitle = "Sobre Mi";
+
+//Establecemos una identidad, que vendria siendo como una clase que nos define
+//para poder acceder a los valores despues.
+
+const EntityElkin = {
+    Nombre : "Elkin",
+    Ocupacion : "Coder",
+    Country : "Colombia",
+    Hobbies  : [
+        "Leer",
+        "Codificar",
+        "Otros"
+    ]
+}
+
+//Agregamos las skills independiente en una lista
+const skills = [ "JavaScript", "Astro", "Symfony" ];
+
+//Ahora, voy a importar el Layout
+import BaseHtml from "../layouts/Layout.astro"
+
+const estado = true;
+
+//Usando una variable para CSS
+const color = "#202020"
+---
+
+<!--Ahora, accederemos a todos esos datos -->
+
+
+<p>Esta es una breve descripcion</p>
+
+<ul>
+    <li>
+        Mi nombre es {EntityElkin.Nombre}.
+    </li>
+
+    <li>
+        Esta es mi ocupacion {EntityElkin.Ocupacion}.
+    </li>
+
+    <!--Ahora, para acceder a los elementos de la lista, usare una funcion
+    map() -->
+
+    <!--Acceso a la documentacion -->
+    <!--https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/map-->
+
+    <p>Estas son mis ocupaciones</p>
+
+    {EntityElkin.Hobbies.map(
+        (hobbies) => <li>{hobbies}</li>
+    )}
+</ul>
+
+    <br>
+    <!--Continuamos agregando logica -->
+
+    {
+        skills.length >= 2 && 
+        <li>Estas son mis habilidades {skills[0]}</li>
+    }
+
+    <br>
+
+<p>Probando con los operadores ternarios {
+    estado  ? 
+        <p class = "activo" >Activo</p> 
+            : 
+        <p class = "inactivo" >Inactivo<p/>
+    }
+</p>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<style>
+    .activo {
+        color : green;
+    }
+    
+    .inactivo {
+        color : red;
+    }
+</style>
