@@ -3,8 +3,32 @@
 import BaseHtml from '../layouts/Layout.astro'
 
 import NavigationComponent from '../components/Navigation.astro'
+import FooterPage from '../components/Footer.astro'
+import StylesCss from '../styles/global.css'
+
+const pageTitle = "Demo";
 ---
+<html lang="es">
+  <head>
+    <meta charset="utf-8" />
+    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+    <meta name="viewport" content="width=device-width" />
+    <meta name="generator" content={Astro.generator} />
+    <title>{pageTitle}</title>
+  </head>
+  <body>
 
-<!--Agregamos el componente. -->
-<NavigationComponent/>
+    <header>
+        <nav>
+            <NavigationComponent />
+        </nav>
+    </header>
 
+    <h1>{pageTitle}</h1>
+    <FooterPage />
+
+    <script>
+        import "../scripts/menu.js"
+    </script>
+  </body>
+</html>
