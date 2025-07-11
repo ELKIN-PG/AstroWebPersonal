@@ -1,4 +1,10 @@
 ---
+//Importaciones - Hoja de estilos CSS Global.
+import BaseCSS from "../styles/global.css"
+
+//Ahora, voy a importar el Layout
+import BaseHtml from "../layouts/Layout.astro"
+
 //Agregando codigo JavaScript
 
 //Definimos el titulo de la pagina usando una constante
@@ -20,9 +26,6 @@ const EntityElkin = {
 
 //Agregamos las skills independiente en una lista
 const skills = [ "JavaScript", "Astro", "Symfony" ];
-
-//Ahora, voy a importar el Layout
-import BaseHtml from "../layouts/Layout.astro"
 
 const estado = false;
 
