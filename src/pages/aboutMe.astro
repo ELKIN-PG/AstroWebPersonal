@@ -24,10 +24,12 @@ const skills = [ "JavaScript", "Astro", "Symfony" ];
 //Ahora, voy a importar el Layout
 import BaseHtml from "../layouts/Layout.astro"
 
-const estado = true;
+const estado = false;
 
 //Usando una variable para CSS
-const color = "#202020"
+const color = "#202020";
+const fondo = "o";
+const tamaño = "20px";
 ---
 
 <!--Ahora, accederemos a todos esos datos -->
@@ -85,16 +87,16 @@ const color = "#202020"
 
 
 
+<!--Le damos  acceso a las variables que hemos definidos-->
 
-
-
-
-<style>
+<style define:vars = {{color, fondo, tamaño}}>
     .activo {
         color : green;
     }
     
     .inactivo {
         color : red;
+        //Acceder a las variables que hemos definido
+        tamaño : var(--tamaño);
     }
 </style>

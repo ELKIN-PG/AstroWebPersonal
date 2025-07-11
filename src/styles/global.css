@@ -1,0 +1,29 @@
+html {
+  background-color: #f1f5f9;
+  font-family: sans-serif;
+}
+
+body {
+  margin: 0 auto;
+  width: 100%;
+  max-width: 80ch;
+  /**Documentacion respecto al uso de 'ch'
+
+  https://stackoverflow.com/questions/48649169/what-is-difference-between-css-em-and-ch-units
+  **/
+  padding: 1rem;
+  line-height: 1.5;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+h1 {
+  margin: 1rem 0;
+  font-size: 2.5rem;
+  /**Más documentacion con respecto a las unidades de medida en CSS
+  
+  https://developer.mozilla.org/es/docs/Learn_web_development/Core/Styling_basics/Values_and_units
+  **/
+}
