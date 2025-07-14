@@ -38,7 +38,7 @@ Agregango los estilos para los navs links
   width: 100%;
   top: 5rem;
   left: 48px;
-  background-color: #ff9776;
+  background-color: #57a5f26a;
   display: none;
   margin: 0;
 }
@@ -55,7 +55,7 @@ Agregango los estilos para los navs links
 
 .nav-links a:hover,
 .nav-links a:focus {
-  background-color: #ff9776;
+  background-color: #9499f6;
 }
 
 .expanded {
@@ -77,6 +77,8 @@ Agregango los estilos para los navs links
   }
 
 }
+
+/**Final de los estilos de la barra de navegacion**/
 
 /**Estilizando el componente (Polemico) Hamburger**/
 
