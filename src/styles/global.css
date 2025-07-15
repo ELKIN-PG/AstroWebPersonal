@@ -1,5 +1,5 @@
 html {
-  background-color: #f1f5f9;
+  background-color: #1c1c1c;
   font-family: sans-serif;
 }
 
@@ -7,61 +7,76 @@ body {
   margin: 0 auto;
   width: 100%;
   max-width: 80ch;
-  /**Documentacion respecto al uso de 'ch'
-
-  https://stackoverflow.com/questions/48649169/what-is-difference-between-css-em-and-ch-units
-  **/
+  /*Documentacion
+  
+  
+  
+  
+  
+  
+  */
   padding: 1rem;
   line-height: 1.5;
 }
 
 * {
   box-sizing: border-box;
+  font-family:'Courier New', Courier, monospace
+
+  /**Documentacion
+  
+  
+  
+  
+  
+  **/
+
 }
 
 h1 {
   margin: 1rem 0;
   font-size: 2.5rem;
-  /**Más documentacion con respecto a las unidades de medida en CSS
+  /**Documentacion
   
-  https://developer.mozilla.org/es/docs/Learn_web_development/Core/Styling_basics/Values_and_units
+  
+  
+  
+  
+  
   **/
 }
 
-/**
-Agregango los estilos para los navs links
-**/
+/*#### INDEX PAGE ####*/
 
-/* estilos de la barra de navegación*/
+.p-text {
+  font-size: 0.8rem;
+  font-family:'Courier New', Courier, monospace
+}
+/*#### END INDEX PAGE ###*/
+
+/*##### RESPONSIVE #####
+*/
 
 .nav-links {
-  width: 100%;
-  top: 5rem;
-  left: 48px;
-  background-color: #57a5f26a;
-  display: none;
-  margin: 0;
+  border-color: 2px solid red;
 }
 
 .nav-links a {
-  display: block;
-  text-align: center;
-  padding: 10px 0;
-  text-decoration: none;
-  font-size: 1.2rem;
-  font-weight: bold;
-  text-transform: uppercase;
+  /*https://developer.mozilla.org/es/docs/Web/CSS/text-transform#:~:text=La%20propiedad%20CSS%20text%2Dtransform%20especifica%20el%20cambio%20entre%20may%C3%BAsculas%20y%20min%C3%BAsculas%20del%20texto%20de%20un%20elemento.%20Puede%20ser%20usada%20para%20que%20un%20texto%20aparezca%20completamente%20en%20may%C3%BAsculas%2C%20en%20min%C3%BAsculas%2C%20o%20con%20la%20primera%20letra%20de%20cada%20palabra%20en%20may%C3%BAscula.*/
+    text-transform: lowercase;
+    font-size: 0.7rem;
+    color: rgb(141, 141, 141);
+    display: inline-block;
+    padding: 15px 20px;
+    /*display: block;*/
+    text-align: center;
+    text-decoration: None;
+}
+.nav-links a:hover, .nav-link a:focus {
+  background-color:rgba(150, 150, 150, 0.104)
 }
 
-.nav-links a:hover,
-.nav-links a:focus {
-  background-color: #9499f6;
-}
-
-.expanded {
-  display: unset;
-}
-
+/*#### SIZE PHONE ####*/ 
 @media screen and (min-width: 636px) {
   .nav-links {
     margin-left: 5em;
@@ -75,17 +90,28 @@ Agregango los estilos para los navs links
     display: inline-block;
     padding: 15px 20px;
   }
-
+  .hamburguer {
+    display: None;
+  }
 }
 
-/**Final de los estilos de la barra de navegacion**/
 
-/**Estilizando el componente (Polemico) Hamburger**/
+/*##### FOOTER #####
 
-.hamburger {
-  padding-right: 20px;
+
+
+
+
+
+*/
+
+/*####### COMPONENTS STYLES #######*/
+
+/*##### HAMBURGUER #######*/
+
+.hamburguer {
+  padding-right: 20x;
   cursor: pointer;
-  display: None;
 }
 
 .hamburger .line {
@@ -93,5 +119,5 @@ Agregango los estilos para los navs links
   width: 40px;
   height: 5px;
   margin-bottom: 10px;
-  background-color: #ff9776;
+  background-color: #29292907;
 }

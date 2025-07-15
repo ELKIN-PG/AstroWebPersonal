@@ -1,20 +1,18 @@
 ---
-//Creando el componente de las redes sociales
-const {platform, username} = Astro.props;
-
+const { platform, username } = Astro.props;
+import "../styles/global.css";
 ---
 
 <a href={`https://www.${platform}.com/${username}`}>{platform}</a>
 
-
-<!--Estilizando el componente de las redes sociales.  -->
-
 <style>
-    a {
+  a {
     padding: 0.5rem 1rem;
-    color: white;
-    background-color: #022e41;
+    font-size: 0.7rem;
+    color: rgb(0, 0, 0);
+    background-color: #ffffff;
     text-decoration: none;
-    border-radius : 16px;
+    border-radius: 16px;
+    font-family: "Courier New", Courier, monospace;
   }
 </style>

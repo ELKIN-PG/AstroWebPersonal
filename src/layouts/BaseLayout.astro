@@ -1,0 +1,36 @@
+---
+import Header from "../components/Navigation.astro";
+import Footer from "../components/Footer.astro";
+import "../styles/global.css";
+
+const {pageTitle} = Astro.props;
+---
+
+<html lang="es">
+  <head>
+    <meta charset="utf-8" />
+    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+    <meta name="viewport" content="width=device-width" />
+    <meta name="generator" content={Astro.generator} />
+    <title>{pageTitle}</title>
+  </head>
+  <body>
+    <Header />
+    <h1>{pageTitle}</h1>
+    <slot />
+    <!--Documentacion
+		
+	https://docs.astro.build/es/basics/astro-components/#slots
+	
+	-->
+    <p class="p-text">
+      Lorem ipsum dolor sit amet consectetur adipisicing elit. Nihil eum tempora
+      optio laboriosam, maxime facere ipsa similique officia quam, aut magnam in
+      assumenda! Natus eius eligendi quam vero quae corporis.
+    </p>
+    <Footer />
+    <script>
+      import "../scripts/menu.js";
+    </script>
+  </body>
+</html>
