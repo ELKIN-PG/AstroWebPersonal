@@ -1,5 +1,5 @@
 html {
-  background-color: #1c1c1c;
+  background-color: #010000;
   font-family: sans-serif;
 }
 
@@ -21,7 +21,8 @@ body {
 
 * {
   box-sizing: border-box;
-  font-family:'Courier New', Courier, monospace
+  font-family: 'Courier New', Courier, monospace;
+  color: rgb(219, 219, 219);
 
   /**Documentacion
   
@@ -34,8 +35,9 @@ body {
 }
 
 h1 {
-  margin: 1rem 0;
-  font-size: 2.5rem;
+  margin-bottom: 0.4rem;
+  padding-bottom: 0px;
+  font-size: 3.5rem;
   /**Documentacion
   
   
@@ -50,33 +52,48 @@ h1 {
 
 .p-text {
   font-size: 0.8rem;
-  font-family:'Courier New', Courier, monospace
+  font-family: 'Courier New', Courier, monospace;
+  color: rgb(158, 158, 158);
 }
+
+.i-cita {
+  font-size: 0.9rem;
+}
+
 /*#### END INDEX PAGE ###*/
 
 /*##### RESPONSIVE #####
 */
 
+.nav {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 100px;
+}
+
 .nav-links {
   border-color: 2px solid red;
+  display: inline;
 }
 
 .nav-links a {
   /*https://developer.mozilla.org/es/docs/Web/CSS/text-transform#:~:text=La%20propiedad%20CSS%20text%2Dtransform%20especifica%20el%20cambio%20entre%20may%C3%BAsculas%20y%20min%C3%BAsculas%20del%20texto%20de%20un%20elemento.%20Puede%20ser%20usada%20para%20que%20un%20texto%20aparezca%20completamente%20en%20may%C3%BAsculas%2C%20en%20min%C3%BAsculas%2C%20o%20con%20la%20primera%20letra%20de%20cada%20palabra%20en%20may%C3%BAscula.*/
-    text-transform: lowercase;
-    font-size: 0.7rem;
-    color: rgb(141, 141, 141);
-    display: inline-block;
-    padding: 15px 20px;
-    /*display: block;*/
-    text-align: center;
-    text-decoration: None;
-}
-.nav-links a:hover, .nav-link a:focus {
-  background-color:rgba(150, 150, 150, 0.104)
+  text-transform: lowercase;
+  font-size: 0.7rem;
+  color: rgb(141, 141, 141);
+  display: inline;
+  padding: 15px 20px;
+  /*display: block;*/
+  text-align: center;
+  text-decoration: None;
 }
 
-/*#### SIZE PHONE ####*/ 
+.nav-links a:hover,
+.nav-link a:focus {
+  background-color: None;
+}
+
+/*#### SIZE PHONE ####*/
 @media screen and (min-width: 636px) {
   .nav-links {
     margin-left: 5em;
@@ -90,6 +107,7 @@ h1 {
     display: inline-block;
     padding: 15px 20px;
   }
+
   .hamburguer {
     display: None;
   }
