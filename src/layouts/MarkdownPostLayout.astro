@@ -1,0 +1,11 @@
+---
+// Documentacion
+//https://docs.astro.build/es/tutorial/4-layouts/2/
+const { frontmatter } = Astro.props;
+import BaseLayout from './BaseLayout.astro'
+---
+
+<BaseLayout>
+    <p>Escrito por {frontmatter.author}</p>
+    <slot />
+</BaseLayout>
