@@ -1,0 +1,123 @@
+---
+//Esta es la lista de tecnologias que incluire
+//Importante: Esto tiene TailWind
+
+
+//Esta es la seccion de importacion de los iconos.
+//iconos por importar
+
+//1. Python
+//2. PHP
+//3. Javascript
+//4. C++
+//5. Symfony
+//6. Astro
+//7. React
+
+const Tecnologias = {
+    /* Name, Class, Icon */
+
+    Python : {
+        Name : "Python",
+        Class : "Estilos Tailwind",
+        Icon: "Python"
+    },
+
+    Php : {
+        Name: "Php",
+        Class : "Estilos Tailwind",
+        Icon: "Php"
+
+    },
+
+    Javascript : {
+        Name : "Javacript",
+        Class : "Estilos Tailwind",
+        Icon : "Javascript"
+    }
+};
+
+//Ahora, una lista de obejtos con los proyectos.
+
+const PROJECTS = [
+  {
+    title: "Empresa Ficticia - Pagina informativa",
+    description: "Descripcion del proyecto",
+    link: "#",
+    github: "Url del proyecto ya en produccion",
+    image: "/projects/proyecto1.webp",
+    tags: [], //Agregar los iconos, los tags, que representan las tecnologias que fueron usadas 
+  },
+  {
+    title: "Aplicacion del Clima",
+    description: "Descripcion del proyecto",
+    link: "#",
+    github: "Url del proyecto ya en produccion", //Pendiente por agregar
+    image: "/projects/proyecto2.webp",
+    tags: [],
+  },
+];
+---
+
+<div class="flex flex-col gap-y-16">
+  {PROJECTS.map(({ image, title, description, tags, link, github }) => (
+    <article class="flex flex-col md:flex-row md:space-x-8 space-y-8 md:space-y-0">
+      <div class="w-full md:w-1/2 flex items-center group">
+        <div class="relative flex flex-col items-center transition duration-500 ease-in-out transform shadow-xl overflow-hidden rounded-xl sm:rounded-xl lg:border lg:border-gray-800 group-hover:shadow-2xl">
+          <img alt="Captura del Proyecto" class="object-cover object-top w-full h-full transition duration-500 sm:h-full md:scale-110 md:group-hover:scale-105" loading="lazy" src={image} />
+        </div>
+      </div>
+
+      <div class="w-full md:w-1/2 flex flex-col justify-center">
+        <h3 class="text-2xl font-bold mb-2">{title}</h3>
+        <div class="flex flex-wrap mt-2">
+          <ul class="flex flex-row mb-2 gap-x-2">
+            {/* Seccion dnode se agregan los iconos para cada card del proyecto
+            
+            Agregar a la lista de tags,las referencias a los iconos.
+
+            tag.name (icon)
+
+            por ahora la voy a retirar, pero todas las denominaciones tag, deben llevar su referencia a name
+
+            Igualmanete adjunto el link al repo origen de donde obtuve este codigo
+
+            https://github.com/Pietro923/portfolio-Pietro/blob/main/src/components/Proyectos.astro#L70
+            
+            */}
+            {tags.map((tag) => (
+              <li = {tag.name}>
+                <span class={`flex gap-x-2 rounded-full text-xs ${tag} py-1 px-2`}>
+                  <tag class="size-4" />
+                  {tag}
+                </span>
+              </li>
+            ))}
+          </ul>
+        </div>
+
+        <div class="mt-2 text-lg mb-4">{description}</div>
+
+        {/* Crear los componentes se social, pero ya esta creado, seria reemplazarlo */}
+
+       {/*  <footer class="flex items-end justify-start mt-4 gap-x-4">
+          {github && (
+            <Social_icons href={github}>
+              <Github class="size-6" />
+              Code
+            </Social_icons>
+          )}
+          {link && (
+            <Social_icons href={link}>
+              <Link class="size-4" />
+              Preview
+            </Social_icons>
+          )}
+        </footer> */}
+      </div>
+    </article>
+  ))}
+</div>
+
+
+
