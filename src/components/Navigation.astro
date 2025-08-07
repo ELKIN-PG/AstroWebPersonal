@@ -1,12 +1,16 @@
 ---
 //Importar estilos CSS
 import "../styles/global.css";
+import imageNavLogo from "../assets/taza.webp"
+import imageHtmlLogo from "../assets/etiquetaHtml.png"
+import imageHtmlLogoSvg from "../assets/html-tag.svg"
 ---
 
 <!--Componente de navegacion -->
 <div class="nav">
   <div class="nav-logo">
     <!-- Mi logo  -->
+    <img src={imageHtmlLogoSvg.src} alt=" descriptive text" width="40" height="40" class="nav_nav-logo_img_logoHtml">
   </div>
  <div class="nav-links">
     <a class="nav-buttons" href="/">Inicio</a>
@@ -16,6 +20,24 @@ import "../styles/global.css";
 </div>
 
 <style>
+/* Bordes del contenedor principal */
+
+.nav {
+  border: 1px solid rgb(116, 116, 110);
+  border-radius: 12px;
+}
+
+.nav_nav-logo_img_logoHtml {
+  background-color: #ffffff;
+  border-radius: 50px;
+  border-style: None;
+}
+
+
+
+
+
+
 
 .nav-buttons::before {
   content: '';
